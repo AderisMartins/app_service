@@ -20,4 +20,11 @@ public class TestController {
         return ResponseEntity.ok("Name: " + name);
     }
 
+    @GetMapping("/food/{food}")
+    public ResponseEntity<?> foodTest(@PathVariable String food) {
+        LOG.info("Test controller - Food name: {}", food);
+
+        return ResponseEntity.ok("Food name: " + food);
+    }
+
 }
